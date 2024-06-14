@@ -1,0 +1,17 @@
+spring:
+  mail:
+    host: ${prod_smtp_host}
+    port: ${prod_smtp_port}
+    test-connection: true
+    default-encoding: UTF-8
+    username: ${prod_smtp_username}
+    password: ${prod_smtp_password}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 20000
+          timeout: 20000
+          writetimeout: 30000
+          readtimeout: 20000
+          starttls:enable: true

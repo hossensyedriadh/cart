@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${dev_mysql_url}
+    username: ${dev_mysql_username}
+    password: ${dev_mysql_password}
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: ${dev_mysql_url}
+      username: ${dev_mysql_username}
+      password: ${dev_mysql_password}
+      pool-name: "Hikari Connection Pool [Dev]"
+      maximum-pool-size: 10
+      minimum-idle: 1
+      idle-timeout: 30000
+      connection-timeout: 60000
+      connection-test-query: "select now();"
+  mail:
+    host: ${dev_smtp_host}
+    port: ${dev_smtp_port}
+    username: ${dev_smtp_username}
+    password: ${dev_smtp_password}
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 30000
+          timeout: 30000
+          writetimeout: 45000
+          readtimeout: 30000
+          starttls:
+            enabled: true
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-admin-password: password
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true

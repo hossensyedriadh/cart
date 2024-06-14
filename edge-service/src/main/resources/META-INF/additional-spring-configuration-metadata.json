@@ -1,0 +1,29 @@
+{
+  "properties": [
+    {
+      "name": "bearer-authentication.keystore.location",
+      "type": "java.lang.String",
+      "description": "Keystore file (i.e.: jks/p12/keystore) location to be used for bearer token signing and verification."
+    },
+    {
+      "name": "bearer-authentication.keystore.passphrase",
+      "type": "java.lang.String",
+      "description": "Keystore password."
+    },
+    {
+      "name": "bearer-authentication.keystore.key-alias",
+      "type": "java.lang.String",
+      "description": "Alias for authentication key."
+    },
+    {
+      "name": "bearer-authentication.keystore.private-key-passphrase",
+      "type": "java.lang.String",
+      "description": "Keystore's Private key password."
+    },
+    {
+      "name": "bearer-authentication.token.access-token-validity",
+      "type": "java.time.Duration",
+      "description": "Access token validity (i.e.: 30m,2h)."
+    }
+  ]
+}

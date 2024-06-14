@@ -1,0 +1,30 @@
+spring:
+  r2dbc:
+    url: ${test_mysql_url}
+    username: ${test_mysql_username}
+    password: ${test_mysql_password}
+    pool:
+      initial-size: 5
+      max-size: 10
+      max-idle-time: 2m
+      max-create-connection-time: 90s
+      min-idle: 1
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-admin-password: password
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+
+#custom properties
+bearer-authentication:
+  keystore:
+    location: ${dev_auth_keystore_location}
+    passphrase: ${dev_auth_keystore_passphrase}
+    key-alias: ${dev_auth_key_alias}
+    private-key-passphrase: ${dev_auth_private_key_passphrase}
+  token:
+    access-token-validity: ${dev_access_token_validity}

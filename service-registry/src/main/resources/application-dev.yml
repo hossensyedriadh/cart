@@ -1,0 +1,17 @@
+spring:
+  security:
+    user:
+      name: ${dev_sec_username}
+      password: ${dev_sec_password}
+server:
+  servlet:
+    session:
+      cookie:
+        max-age: 1h
+  shutdown: immediate
+eureka:
+  datacenter: ${dev_datacenter_name}
+  environment: ${dev_env_name}
+  client:
+    service-url:
+      defaultZone: ${eureka_service_url_dev}

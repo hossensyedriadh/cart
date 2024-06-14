@@ -1,0 +1,17 @@
+spring:
+  security:
+    user:
+      name: ${prod_sec_username}
+      password: ${prod_sec_password}
+server:
+  servlet:
+    session:
+      cookie:
+        max-age: 30m
+  shutdown: graceful
+eureka:
+  datacenter: ${prod_datacenter_name}
+  environment: ${prod_env_name}
+  client:
+    service-url:
+      defaultZone: ${eureka_service_url_prod}

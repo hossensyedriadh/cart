@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "ops.mail.from.address",
+      "type": "java.lang.String",
+      "description": "Address to be used as sender address."
+    },
+    {
+      "name": "ops.mail.from.name",
+      "type": "java.lang.String",
+      "description": "Name to be used as sender name."
+    }
+  ]
+}

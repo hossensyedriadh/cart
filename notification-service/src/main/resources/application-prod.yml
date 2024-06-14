@@ -1,0 +1,11 @@
+spring:
+  data:
+    mongodb:
+      uri: ${prod_mongo_uri}
+
+#custom-properties
+bearer-authentication:
+  keystore:
+    location: ${prod_auth_keystore_location}
+    passphrase: ${prod_auth_keystore_passphrase}
+    key-alias: ${prod_auth_key_alias}

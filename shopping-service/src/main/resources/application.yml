@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: "shopping-service"
+  profiles:
+    active: ${active_profile}
+  jpa:
+    open-in-view: true
+  threads:
+    virtual:
+      enabled: true
+  thymeleaf:
+    check-template-location: false
+  data:
+    web:
+      pageable:
+        one-indexed-parameters: true
+        default-page-size: 12
+        max-page-size: 100
+server:
+  port: ${port}
+  servlet:
+    context-path: /shopping-api
+  forward-headers-strategy: framework
+  shutdown: graceful
+  error:
+    whitelabel:
+      enabled: false
+    include-exception: false
+    include-message: always
+    include-stacktrace: never
+    include-binding-errors: always
+  compression:
+    enabled: true
+    mime-types: "*/*"
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka_url}
+    registry-fetch-interval-seconds: 30
+    eureka-server-connect-timeout-seconds: 60
+    eureka-server-read-timeout-seconds: 60
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health
+info:
+  application:
+    metadata:
+      name: ${spring.application.name}
+      description: Shopping Service for Cart
+      version: 0.0.1-SNAPSHOT

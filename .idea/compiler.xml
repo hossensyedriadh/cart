@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="user-service" />
+        <module name="shopping-service" />
+        <module name="notification-service" />
+        <module name="authentication-service" />
+        <module name="inventory-service" />
+        <module name="payment-service" />
+        <module name="edge-service" />
+        <module name="sms-service" />
+        <module name="analytics-service" />
+        <module name="log-service" />
+        <module name="admin-server" />
+        <module name="open-service" />
+        <module name="mail-service" />
+        <module name="service-registry" />
+        <module name="shipping-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin-server" options="-parameters" />
+      <module name="analytics-service" options="-parameters" />
+      <module name="authentication-service" options="-parameters" />
+      <module name="edge-service" options="-parameters" />
+      <module name="inventory-service" options="-parameters" />
+      <module name="log-service" options="-parameters" />
+      <module name="mail-service" options="-parameters" />
+      <module name="notification-service" options="-parameters" />
+      <module name="open-service" options="-parameters" />
+      <module name="payment-service" options="-parameters" />
+      <module name="service-registry" options="-parameters" />
+      <module name="shipping-service" options="-parameters" />
+      <module name="shopping-service" options="-parameters" />
+      <module name="sms-service" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+    </option>
+  </component>
+</project>

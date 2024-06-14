@@ -1,0 +1,17 @@
+spring:
+  security:
+    user:
+      name: ${test_sec_username}
+      password: ${test_sec_password}
+server:
+  servlet:
+    session:
+      cookie:
+        max-age: 1h
+  shutdown: graceful
+eureka:
+  datacenter: ${test_datacenter_name}
+  environment: ${test_env_name}
+  client:
+    service-url:
+      defaultZone: ${eureka_service_url_test}

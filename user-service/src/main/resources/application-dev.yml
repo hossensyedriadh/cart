@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${dev_mysql_url}
+    username: ${dev_mysql_username}
+    password: ${dev_mysql_password}
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: ${dev_mysql_url}
+      username: ${dev_mysql_username}
+      password: ${dev_mysql_password}
+      pool-name: "Hikari Connection Pool [Dev]"
+      maximum-pool-size: 10
+      minimum-idle: 1
+      idle-timeout: 30000
+      connection-timeout: 60000
+      connection-test-query: "select now();"
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-admin-password: password
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+
+#custom-properties
+bearer-authentication:
+  keystore:
+    location: ${dev_auth_keystore_location}
+    passphrase: ${dev_auth_keystore_passphrase}
+    key-alias: ${dev_auth_key_alias}

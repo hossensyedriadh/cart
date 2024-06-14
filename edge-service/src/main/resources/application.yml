@@ -1,0 +1,108 @@
+spring:
+  application:
+    name: edge-service
+  profiles:
+    active: ${active_profile}
+  jpa:
+    open-in-view: true
+  threads:
+    virtual:
+      enabled: true
+  cloud:
+    discovery:
+      enabled: true
+    gateway:
+      httpclient:
+        connect-timeout: 30000
+        compression: true
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: false
+      routes:
+        - id: analytics-service
+          uri: lb://analytics-service
+          predicates:
+            - Path=/analytics-api/**
+          filters:
+            - BearerAuthenticationFilter
+        - id: authentication-service
+          uri: lb://authentication-service
+          predicates:
+            - Path=/authentication-api/**
+        - id: inventory-service
+          uri: lb://inventory-service
+          predicates:
+            - Path=/inventory-api/**
+          filters:
+            - BearerAuthenticationFilter
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/notification-api/**
+          filters:
+            - BearerAuthenticationFilter
+        - id: open-service
+          uri: lb://open-service
+          predicates:
+            - Path=/open-api/**
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/payment-api/**
+          filters:
+            - BearerAuthenticationFilter
+        - id: shipping-service
+          uri: lb://shipping-service
+          predicates:
+            - Path=/shipping-api/**
+          filters:
+            - BearerAuthenticationFilter
+        - id: shopping-service
+          uri: lb://shopping-service
+          predicates:
+            - Path=/shopping-api/**
+          filters:
+            - BearerAuthenticationFilter
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/user-api/**
+          filters:
+            - BearerAuthenticationFilter
+server:
+  netty:
+    connection-timeout: 1m
+    idle-timeout: 2m
+  error:
+    whitelabel:
+      enabled: false
+    include-message: always
+    include-stacktrace: never
+    include-exception: false
+    include-binding-errors: always
+  forward-headers-strategy: framework
+  shutdown: graceful
+  compression:
+    enabled: true
+    mime-types: "*/*"
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: ${eureka_url}
+    registry-fetch-interval-seconds: 30
+    eureka-server-connect-timeout-seconds: 60
+    eureka-server-read-timeout-seconds: 60
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health
+info:
+  application:
+    metadata:
+      name: ${spring.application.name}
+      description: Cloud API Gateway for Cart
+      version: 0.0.1-SNAPSHOT

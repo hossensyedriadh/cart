@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${test_mysql_url}
+    username: ${test_mysql_username}
+    password: ${test_mysql_password}
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: ${test_mysql_url}
+      username: ${test_mysql_username}
+      password: ${test_mysql_password}
+      pool-name: "Hikari Connection Pool [Test]"
+      maximum-pool-size: 20
+      minimum-idle: 1
+      idle-timeout: 30000
+      connection-timeout: 60000
+      connection-test-query: "select now();"
+  h2:
+    console:
+      enabled: false
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true

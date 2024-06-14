@@ -1,0 +1,184 @@
+{
+  "properties": [
+    {
+      "name": "bearer-authentication.keystore.location",
+      "type": "java.lang.String",
+      "description": "Keystore file (i.e.: jks/p12/keystore) location to be used for bearer token signing and verification."
+    },
+    {
+      "name": "bearer-authentication.keystore.passphrase",
+      "type": "java.lang.String",
+      "description": "Keystore password."
+    },
+    {
+      "name": "bearer-authentication.keystore.key-alias",
+      "type": "java.lang.String",
+      "description": "Alias for authentication key."
+    },
+    {
+      "name": "bearer-authentication.keystore.private-key-passphrase",
+      "type": "java.lang.String",
+      "description": "Keystore's Private key password."
+    },
+    {
+      "name": "bearer-authentication.token.access-token-validity",
+      "type": "java.time.Duration",
+      "description": "Access token validity (i.e.: 30m,2h)."
+    },
+    {
+      "name": "bearer-authentication.token.refresh-token-validity",
+      "type": "java.time.Duration",
+      "description": "Refresh token validity (i.e.: 30m,2h)."
+    },
+    {
+      "name": "bearer-authentication.token.mfa-token-validity",
+      "type": "java.time.Duration",
+      "description": "MFA token validity (i.e.: 30m,2h)."
+    },
+    {
+      "name": "spring.datasource.authdb.driver-class-name",
+      "type": "java.lang.String",
+      "description": "Fully qualified JDBC driver classname for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.url",
+      "type": "java.lang.String",
+      "description": "JDBC url for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.username",
+      "type": "java.lang.String",
+      "description": "Database username for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.password",
+      "type": "java.lang.String",
+      "description": "Database password for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.hikari.driver-class-name",
+      "type": "java.lang.String",
+      "description": "Hikari connection pool fully qualified JDBC driver classname for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.hikari.jdbc-url",
+      "type": "java.lang.String",
+      "description": "Hikari connection pool JDBC url for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.hikari.username",
+      "type": "java.lang.String",
+      "description": "Hikari connection pool database username for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.hikari.password",
+      "type": "java.lang.String",
+      "description": "Hikari connection pool database password for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.hikari.pool-name",
+      "type": "java.lang.String",
+      "description": "Hikari connection pool name for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.hikari.maximum-pool-size",
+      "type": "java.lang.Integer",
+      "description": "Hikari connection pool database max connection pool size for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.hikari.minimum-idle",
+      "type": "java.lang.Integer",
+      "description": "Hikari connection pool database min idle connection pool size for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.hikari.idle-timeout",
+      "type": "java.lang.Long",
+      "description": "Hikari connection pool database connection idle timeout millis for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.hikari.connection-timeout",
+      "type": "java.lang.Long",
+      "description": "Hikari connection pool database connection timeout millis for authdb."
+    },
+    {
+      "name": "spring.datasource.authdb.hikari.connection-test-query",
+      "type": "java.lang.String",
+      "description": "Hikari connection pool database connection test query for authdb."
+    },
+    {
+      "name": "spring.datasource.userdb.driver-class-name",
+      "type": "java.lang.String",
+      "description": "Fully qualified JDBC driver classname for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.url",
+      "type": "java.lang.String",
+      "description": "JDBC url for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.username",
+      "type": "java.lang.String",
+      "description": "Database username for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.password",
+      "type": "java.lang.String",
+      "description": "Database password for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.hikari.driver-class-name",
+      "type": "java.lang.String",
+      "description": "Hikari connection pool fully qualified JDBC driver classname for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.hikari.jdbc-url",
+      "type": "java.lang.String",
+      "description": "Hikari connection pool JDBC url for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.hikari.username",
+      "type": "java.lang.String",
+      "description": "Hikari connection pool database username for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.hikari.password",
+      "type": "java.lang.String",
+      "description": "Hikari connection pool database password for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.hikari.pool-name",
+      "type": "java.lang.String",
+      "description": "Hikari connection pool name for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.hikari.maximum-pool-size",
+      "type": "java.lang.Integer",
+      "description": "Hikari connection pool database max connection pool size for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.hikari.minimum-idle",
+      "type": "java.lang.Integer",
+      "description": "Hikari connection pool database min idle connection pool size for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.hikari.idle-timeout",
+      "type": "java.lang.Long",
+      "description": "Hikari connection pool database connection idle timeout millis for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.hikari.connection-timeout",
+      "type": "java.lang.Long",
+      "description": "Hikari connection pool database connection timeout millis for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.hikari.connection-test-query",
+      "type": "java.lang.String",
+      "description": "Hikari connection pool database connection test query for userdb."
+    },
+    {
+      "name": "spring.datasource.userdb.hikari.read-only",
+      "type": "java.lang.Boolean",
+      "description": "Set Read only mode for database connection."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+spring:
+  datasource:
+    userdb:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: ${dev_userdb_mysql_url}
+      username: ${dev_userdb_mysql_username}
+      password: ${dev_userdb_mysql_password}
+      hikari:
+        maximum-pool-size: 10
+        minimum-idle: 1
+        idle-timeout: 30000
+        connection-timeout: 60000
+        connection-test-query: "select now();"
+        username: ${dev_userdb_mysql_username}
+        password: ${dev_userdb_mysql_password}
+        jdbc-url: ${dev_userdb_mysql_url}
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    authdb:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: ${dev_authdb_mysql_url}
+      username: ${dev_authdb_mysql_username}
+      password: ${dev_authdb_mysql_password}
+      hikari:
+        maximum-pool-size: 10
+        minimum-idle: 1
+        idle-timeout: 30000
+        connection-timeout: 60000
+        connection-test-query: "select now();"
+        username: ${dev_authdb_mysql_username}
+        password: ${dev_authdb_mysql_password}
+        jdbc-url: ${dev_authdb_mysql_url}
+        driver-class-name: com.mysql.cj.jdbc.Driver
+  #  h2:
+#    console:
+#      enabled: true
+#      settings:
+#        web-admin-password: password
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+
+#custom properties
+bearer-authentication:
+  keystore:
+    location: ${dev_auth_keystore_location}
+    passphrase: ${dev_auth_keystore_passphrase}
+    key-alias: ${dev_auth_key_alias}
+    private-key-passphrase: ${dev_auth_private_key_passphrase}
+  token:
+    access-token-validity: ${dev_access_token_validity}
+    refresh-token-validity: ${dev_refresh_token_validity}
+    mfa-token-validity: ${dev_mfa_token_validity}

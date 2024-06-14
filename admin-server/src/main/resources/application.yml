@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: "Admin Server"
+  mail:
+    host: ${smtp_host}
+    port: ${smtp_port}
+    test-connection: true
+    default-encoding: UTF-8
+    username: ${smtp_username}
+    password: ${smtp_password}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 20000
+          timeout: 20000
+          writetimeout: 30000
+          readtimeout: 20000
+          starttls:enable: true
+
+ops:
+  mail:
+    from:
+      address: "noreply.ops@cart.com"
+      name: "Cart Cloud OPS"

@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: discovery-service
+server:
+  servlet:
+    session:
+      cookie:
+        same-site: strict
+        http-only: true
+  error:
+    whitelabel:
+      enabled: false
+    include-message: always
+    include-stacktrace: never
+    include-exception: false
+    include-binding-errors: always
+  forward-headers-strategy: framework
+  compression:
+    enabled: true
+    mime-types: "*/*"
+eureka:
+  instance:
+    prefer-ip-address: true
+  server:
+    expected-client-renewal-interval-seconds: 30
+    renewal-percent-threshold: 0.80
+    peer-node-read-timeout-ms: 60000
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health
+info:
+  application:
+    metadata:
+      name: ${spring.application.name}
+      description: Cloud Discovery Service for Cart
+      version: 0.0.1-SNAPSHOT
